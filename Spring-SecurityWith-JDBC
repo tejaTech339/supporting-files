@@ -2,14 +2,12 @@
 @EnableWebSecurity
 public class SecConfig {
 
-
 	private static final String ADMIN = "ADMIN";
 	private static final String USER = "USER";
 
 	@Autowired
 	private DataSource dataSource;
 	
-
 	@Autowired
 	public void authManager(AuthenticationManagerBuilder auth) throws Exception {
 	    auth.jdbcAuthentication()
@@ -34,7 +32,7 @@ public class SecConfig {
 }
 
 ============================= Required Dependencies ==============================
-<dependency>
+               <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jdbc</artifactId>
 		</dependency>
