@@ -1,0 +1,19 @@
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+
+	@Bean
+	public SecurityFilterChain securityFilter(HttpSecurity http) throws Exception {
+
+	//	http.authorizeHttpRequests((request)->
+		         //    request.requestMatchers("/","/about").permitAll()
+		         //           .anyRequest().authenticated())
+		         //           .formLogin(form->form.loginPage("").permitAll());
+	/*	http.csrf().disable().authorizeHttpRequests()
+		                     .anyRequest().authenticated()
+		                     .and()
+		                     .httpBasic();*/
+		
+		return http.build();
+	}
+}
